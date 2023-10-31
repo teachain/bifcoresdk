@@ -12,7 +12,7 @@ import (
 	"testing"
 )
 
-//Deprecated
+// Deprecated
 func TestGetTransactionInfo(t *testing.T) {
 	ts := GetTransactionInstance(SDK_INSTANCE_URL)
 	var r request.BIFTransactionGetInfoRequest
@@ -97,7 +97,7 @@ func TestPrivateContractCall(t *testing.T) {
 	if err != nil {
 		t.Error(err)
 	}
-	
+
 	fmt.Println("res: ", string(dataByte))
 }
 

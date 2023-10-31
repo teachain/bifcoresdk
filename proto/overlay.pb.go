@@ -84,7 +84,7 @@ func (OVERLAY_MESSAGE_TYPE) EnumDescriptor() ([]byte, []int) {
 	return file_overlay_proto_rawDescGZIP(), []int{0}
 }
 
-//message interfaces for java
+// message interfaces for java
 type ChainMessageType int32
 
 const (
@@ -435,7 +435,7 @@ func (x *HelloResponse) GetErrorDesc() string {
 	return ""
 }
 
-//for peers message
+// for peers message
 type Peer struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -570,7 +570,7 @@ func (x *Peers) GetPeers() []*Peer {
 	return nil
 }
 
-//for getledgers
+// for getledgers
 type GetLedgers struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -642,7 +642,7 @@ func (x *GetLedgers) GetChainId() int64 {
 	return 0
 }
 
-//for ledgers
+// for ledgers
 type Ledgers struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -722,7 +722,7 @@ func (x *Ledgers) GetChainId() int64 {
 	return 0
 }
 
-//for dont have
+// for dont have
 type DontHave struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -778,7 +778,7 @@ func (x *DontHave) GetHash() []byte {
 	return nil
 }
 
-//for ledger upgrade
+// for ledger upgrade
 type LedgerUpgradeNotify struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -842,7 +842,7 @@ func (x *LedgerUpgradeNotify) GetSignature() *Signature {
 	return nil
 }
 
-//for key value db storage
+// for key value db storage
 type EntryList struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -890,7 +890,7 @@ func (x *EntryList) GetEntry() [][]byte {
 	return nil
 }
 
-//Register notification events
+// Register notification events
 type ChainHello struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -946,8 +946,8 @@ func (x *ChainHello) GetTimestamp() int64 {
 	return 0
 }
 
-//1.ChainHello response
-//2.async notification from local
+// 1.ChainHello response
+// 2.async notification from local
 type ChainStatus struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

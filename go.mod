@@ -4,8 +4,8 @@ go 1.21.1
 
 require (
 	github.com/ZZMarquis/gm v1.3.2
-	github.com/teachain/bifcoresdk v0.0.0-20230315082607-0f6402a8fa5b
 	github.com/golang/protobuf v1.5.3
+	github.com/gorilla/websocket v1.5.0
 	github.com/tyler-smith/go-bip32 v1.0.0
 	github.com/tyler-smith/go-bip39 v1.1.0
 	golang.org/x/crypto v0.14.0

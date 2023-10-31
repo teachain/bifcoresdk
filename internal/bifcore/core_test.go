@@ -6,7 +6,8 @@ import (
 )
 
 func TestNewClient(t *testing.T) {
-	url := "http://192.168.4.111:27002"
+	//url := "http://test-bif-core.xinghuo.space"
+	url := "http://192.168.3.89:27002"
 	client, err := NewClient(url)
 	if err != nil {
 		t.Error(err.Error())
@@ -18,10 +19,10 @@ func TestNewClient(t *testing.T) {
 		return
 	}
 	t.Log("blockNumber=", blockNumber)
-	//blockNumber = 3171122
+	blockNumber = 100000
 	header, err := client.GetBlockHeaderByNumber(blockNumber)
 	if err != nil {
-		t.Error(err.Error())
+		t.Error("number", blockNumber, err.Error())
 		return
 	}
 	t.Log(fmt.Sprintf("result=%+v\n", header))
@@ -32,6 +33,6 @@ func TestNewClient(t *testing.T) {
 	}
 	t.Log(fmt.Sprintf("transactionInBlock=%+v\n", transactionInBlock))
 
-	t.Log(fmt.Sprintf("tx_count=%+v", transactionInBlock.Transactions[0].Transaction.Operations[0].SendGas.Input))
+	t.Log(fmt.Sprintf("tx_count=%+v", transactionInBlock.TotalCount))
 
 }

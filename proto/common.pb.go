@@ -432,7 +432,7 @@ func (x *WsMessage) GetData() []byte {
 	return nil
 }
 
-//for ping messsage
+// for ping messsage
 type Ping struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -480,7 +480,7 @@ func (x *Ping) GetNonce() int64 {
 	return 0
 }
 
-//for pong message
+// for pong message
 type Pong struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

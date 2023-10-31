@@ -3,6 +3,7 @@ package blockchain
 import (
 	"encoding/hex"
 	"encoding/json"
+	protobuf "github.com/golang/protobuf/proto"
 	"github.com/teachain/bifcoresdk/common"
 	"github.com/teachain/bifcoresdk/exception"
 	"github.com/teachain/bifcoresdk/module/encryption/key"
@@ -11,7 +12,6 @@ import (
 	"github.com/teachain/bifcoresdk/types/response"
 	"github.com/teachain/bifcoresdk/utils/hash"
 	"github.com/teachain/bifcoresdk/utils/http"
-	protobuf "github.com/golang/protobuf/proto"
 )
 
 // BIFTransactionService ...
@@ -400,7 +400,7 @@ func (ts *TransactionService) GetTransactionInfo(r request.BIFTransactionGetInfo
 	return res
 }
 
-//Deprecated
+// Deprecated
 func (ts *TransactionService) PrivateContractCreate(r request.BIFTransactionPrivateContractCreateRequest) response.BIFTransactionPrivateContractCreateResponse {
 
 	if !key.IsAddressValid(r.SenderAddress) {
@@ -466,7 +466,7 @@ func (ts *TransactionService) PrivateContractCreate(r request.BIFTransactionPriv
 	}
 }
 
-//Deprecated
+// Deprecated
 func (ts *TransactionService) PrivateContractCall(r request.BIFTransactionPrivateContractCallRequest) response.BIFTransactionPrivateContractCallResponse {
 
 	if !key.IsAddressValid(r.SenderAddress) {
