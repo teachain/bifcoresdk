@@ -2,7 +2,6 @@ package blockchain
 
 import (
 	"encoding/json"
-	"fmt"
 	"github.com/teachain/bifcoresdk/common"
 	"github.com/teachain/bifcoresdk/exception"
 	"github.com/teachain/bifcoresdk/types/request"
@@ -84,7 +83,6 @@ func (bs *BlockService) GetTransactions(r request.BIFBlockGetTransactionsRequest
 			BIFBaseResponse: exception.CONNECTNETWORK_ERROR,
 		}
 	}
-	fmt.Println("BIFBlockGetTransactionsResponse=", string(dataByte))
 	var res response.BIFBlockGetTransactionsResponse
 	err = json.Unmarshal(dataByte, &res)
 	if err != nil {
@@ -147,7 +145,6 @@ func (bs *BlockService) GetBlockInfo(r request.BIFBlockGetInfoRequest) response.
 			BIFBaseResponse: exception.CONNECTNETWORK_ERROR,
 		}
 	}
-	fmt.Println("res=", string(dataByte))
 	var res response.BIFBlockGetInfoResponse
 	err = json.Unmarshal(dataByte, &res)
 	if err != nil {
